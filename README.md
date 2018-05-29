@@ -1,17 +1,11 @@
-#SWRLAPI Built-in Library Example
+#SWRLAPI SWRLGEO - An implementation of geospatial functions for SWRL
 
-This project provides a minimal example of a project that uses the [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)'s [Built-in Bridge](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge)
-to create a [SWRL built-in](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInFAQ) library. 
-It can be used as a starting point for developers who wish to create their own built-in library.
+This project provides a collection of functions for geospatial operations using SWRL for a SWRLAPI implementation.
 
-This example library defines a single built-in called ```stringsEqual``` that accepts two string argument. 
-It returns ```true``` if both arguments are equal, and ```false``` otherwise. 
-Instructions for building and installing this library are outlined below.
+This example library defines the Egenhofer Relation functions available in the GeoSPARQL standard for the usage in SWRL. In addition it implements utility functions to compare features of geometries such as its length, its type and its validity.
 
-The ```./src/main/resources/owl``` directory contains an OWL file called ```StringsBuiltInLibrary.owl```
+The ```./src/main/resources/owl``` directory contains an OWL file called ```swrlgeo.owl```
 that [defines this built-in](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge#defining-built-ins-in-owl) so that it can be used by importing ontologies. 
-An example importing ontology called ```StringsBuiltInLibraryUser.owl``` defines a simple SQWRL query that uses the
-```stringsEqual``` built-in to compare two strings.
 
 This built-in library can be used in two primary ways:
 

@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semgis.de/spatial/swrlgeo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlgeo="http://semgis.de/spatial/swrlgeo#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrlb#args -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/11/swrlb#args"/>
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrlb#maxArgs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/11/swrlb#maxArgs"/>
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrlb#minArgs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/11/swrlb#minArgs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrl#Builtin -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/11/swrl#Builtin">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/11/swrlb#args"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/11/swrlb#maxArgs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/11/swrlb#minArgs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/11/swrlb#args"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/11/swrlb#maxArgs"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/11/swrlb#minArgs"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#contains -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#contains">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#coveredBy -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#coveredBy">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#covers -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#covers">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#crosses -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#crosses">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#disjoint -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#disjoint">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#equals -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#equals">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#equalsExact -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#equalsExact">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasAreaSizeBiggerThan -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasAreaSizeBiggerThan">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasAreaSizeSmallerThan -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasAreaSizeSmallerThan">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasDistanceBiggerThan -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasDistanceBiggerThan"/>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasDistanceEqualTo -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasDistanceEqualTo"/>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasDistanceSmallerThan -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasDistanceSmallerThan"/>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasEqualLength -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasEqualLength"/>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasEqualNumPoints -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasEqualNumPoints">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasLengthEqualTo -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasLengthEqualTo"/>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasLengthGreaterThan -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasLengthGreaterThan"/>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#hasLengthSmallerThan -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#hasLengthSmallerThan"/>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#intersects -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#intersects">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isClosed -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isClosed">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isEmpty -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isEmpty">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isLineString -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isLineString">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isMultipolygon -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isMultipolygon">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isPoint -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isPoint">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isPolygon -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isPolygon">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isRectangle -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isRectangle">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isRing -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isRing">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isSimple -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isSimple">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isValid -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isValid">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#isWithinDistance -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#isWithinDistance">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#overlaps -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#overlaps">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#touches -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#touches">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semgis.de/spatial/swrl#within -->
+
+    <owl:NamedIndividual rdf:about="http://semgis.de/spatial/swrl#within">
+        <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:maxArgs>
+        <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrlb:minArgs>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

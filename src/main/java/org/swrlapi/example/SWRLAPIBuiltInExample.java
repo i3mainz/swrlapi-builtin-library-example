@@ -1,5 +1,6 @@
 package org.swrlapi.example;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -34,8 +35,11 @@ public class SWRLAPIBuiltInExample
       SQWRLQueryEngine queryEngine = SWRLAPIFactory.createSQWRLQueryEngine(ontology);
 
       // Create and execute a SQWRL query using the SWRLAPI
+      for(@NonNull IRI iri:queryEngine.getSWRLBuiltInIRIs()) {
+    	  System.out.println(iri.toString());
+      }
       SQWRLResult result = queryEngine
-        .runSQWRLQuery("q1", "strings:stringEqual(\"a\", \"a\") -> sqwrl:select(\"Yes!\")");
+        .runSQWRLQuery("q1", "swrlgeo:st_isValid(\"POINT(0 0)\") -> sqwrl:select(\"IsValid\")");
 
       // Print the result
       if (result.next())

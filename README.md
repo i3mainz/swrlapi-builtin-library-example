@@ -1,4 +1,4 @@
-#SWRLAPI SWRLGEO - An implementation of geospatial functions for SWRL
+# SWRLAPI SWRLGEO - An implementation of geospatial functions for SWRL
 
 This project provides a collection of functions for geospatial operations using SWRL for a SWRLAPI implementation.
 

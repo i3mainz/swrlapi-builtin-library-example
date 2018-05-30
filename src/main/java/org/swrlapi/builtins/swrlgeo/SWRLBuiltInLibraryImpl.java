@@ -30,13 +30,21 @@ public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
 
   private static final String Namespace = "http://semgis.de/spatial/swrlgeo#";
 
-  
+  /**
+   * Constructor for this class.
+   */
   public SWRLBuiltInLibraryImpl()
   {
     super("swrlgeo", Namespace, new HashSet<>(Arrays.asList(BuiltInNames)));
   }
   
-  
+  /**
+   * Parses a String argument in WKT to a vector graphic geometry representation.
+   * @param id the argument number
+   * @param arguments the array of arguments
+   * @return the parsed geometry
+   * @throws SWRLBuiltInException
+   */
   public Geometry getArgumentAsAGeometry(Integer id,List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException {
 	  WKTReader reader = new WKTReader();
 	  try {
@@ -252,6 +260,12 @@ public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
     return geom1.getLength()<greaterThan;
   }
   
+  /**
+   * Indicates if the given geometry is comprised of the given number of geometries.
+   * @param arguments the given geometry as Literal
+   * @return true if the geometry is comprised of the given number of geometries
+   * @throws SWRLBuiltInException on error
+   */
   public boolean st_hasNumGeometries(List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException
   {   
     checkNumberOfArgumentsEqualTo(arguments.size(), 2);    
@@ -260,6 +274,12 @@ public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
     return geom1.getNumGeometries()==numGeoms;
   }
   
+  /**
+   * Indicates if the first geometry is intersects with the second geometry.
+   * @param arguments the first and second geometry as Literal
+   * @return true if the first geometry intersects with the second geometry
+   * @throws SWRLBuiltInException on error
+   */
   public boolean st_intersects(List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException
   {   
     checkNumberOfArgumentsEqualTo(arguments.size(), 2);    
@@ -350,6 +370,12 @@ public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
     return "LINESTRING".equals(geom1.getGeometryType().toUpperCase());
   }
   
+  /**
+   * Indicates if the given geometry is a MultiCurve.
+   * @param arguments the first and second geometry as Literal
+   * @return true if the first geometry is a MultiCurve, false otherwise
+   * @throws SWRLBuiltInException on error
+   */
   public boolean st_isMultiCurve(List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException
   {   
     checkNumberOfArgumentsEqualTo(arguments.size(), 1);    
@@ -544,6 +570,12 @@ public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
     return geom1.isValid();
   }
   
+  /**
+   * Indicates if the first geometry isWithinDistance of a given value to the second geometry.
+   * @param arguments the first and second geometry as Literal
+   * @return true if the first geometry equals the second geometry, false otherwise
+   * @throws SWRLBuiltInException on error
+   */
   public boolean st_isWithinDistance(List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException
   {   
     checkNumberOfArgumentsEqualTo(arguments.size(), 3);    
@@ -583,6 +615,12 @@ public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
     return geom1.overlaps(geom2);
   }
   
+  /**
+   * Indicates if the first geometry touches the second geometry.
+   * @param arguments the first and second geometry as Literal
+   * @return true if the first geometry touches the second geometry, false otherwise
+   * @throws SWRLBuiltInException on error
+   */
   public boolean st_touches(List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException
   {   
     checkNumberOfArgumentsEqualTo(arguments.size(), 2);    

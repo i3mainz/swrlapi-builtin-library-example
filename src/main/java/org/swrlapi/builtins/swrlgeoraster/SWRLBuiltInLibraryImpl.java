@@ -1,4 +1,4 @@
-package org.swrlapi.builtins.swrlgeo;
+package org.swrlapi.builtins.swrlgeoraster;
 
 import org.swrlapi.builtins.AbstractSWRLBuiltInLibrary;
 import org.swrlapi.builtins.arguments.SWRLBuiltInArgument;
@@ -47,7 +47,7 @@ public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
    * @return the parsed geometry
    * @throws SWRLBuiltInException
    */
-  public Geometry getArgumentAsAGeometry(Integer id,List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException {
+  public Geometry getArgumentAsACoverage(Integer id,List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException {
 	  WKTReader reader = new WKTReader();
 	  try {
 		return reader.read(getLiteralArgumentAsAString(id, arguments));

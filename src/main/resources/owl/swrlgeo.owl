@@ -2,13 +2,13 @@
 <rdf:RDF xmlns="http://raw.githubusercontent.com/i3mainz/swrlapi-swrlgeo/master/src/main/resources/owl/swrlgeo.owl#" xml:base="http://raw.githubusercontent.com/i3mainz/swrlapi-swrlgeo/master/src/main/resources/owl/swrlgeo.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:swrlgeo="http://raw.githubusercontent.com/i3mainz/swrlapi-swrlgeo/master/src/main/resources/owl/swrlgeo.owl#"
+     xmlns:swrlgeo="http://semgis.de/spatial/swrlgeo#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about=""/>
+    <owl:Ontology rdf:about="http://semgis.de/spatial/swrlgeo"/>
     
 
 

@@ -1,0 +1,19 @@
+image: maven:3-jdk-8
+# These are the default stages.
+# You don't need to explicitly define them.
+# But you could define any stages you want.
+stages:
+  - build
+  - test
+
+# This is the name of the job.
+# You can choose it freely.
+maven_build:
+  # A job is always executed within a stage.
+  # If no stage is set, it defaults to 'test'.
+  stage: test
+  # Here you can execute arbitrate terminal commands.
+  # If any of the commands returns a non zero exit code the job fails.
+  script:
+    - echo "Building project with maven"
+    - mvn verify
